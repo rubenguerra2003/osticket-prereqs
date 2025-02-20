@@ -60,7 +60,9 @@ Now we need to install / Enable IIS in Windows. Go to your Search Bar > Type "Co
 <p>
 <h3 align="center">Download the Rewrite Module file, agree with all the terms and it should now be installed onto the Computer.</h3>
 <p>
-  <img src="https://github.com/Joeljjoseph1998/osticket-prereqs/assets/50834280/28cf2dd0-d39e-45f8-a01b-61aec6657228"height="75%" width="100%"/>
+	
+ ![rewrite](https://github.com/user-attachments/assets/4734f0d7-881a-4113-b8fc-22649c55d35d)
+ 
 </p>
 <br/>
 <h3 align="center">CREATE DIRECTORY C:\PHP</h3>
@@ -173,31 +175,28 @@ Now we need to install / Enable IIS in Windows. Go to your Search Bar > Type "Co
 <br />
 <p>
 </p>
-<p>
-</p>
-<p>
-</p>
-<br />
-<br />
 <h3 align="center">Download and Install HeidiSQL</h3>
 <br />
 <p>
-	<img src="https://i.imgur.com/AEg0b2P.png" height="75%" width="100%" />
+
+![install heidisql](https://github.com/user-attachments/assets/2d23f8d0-c584-491a-9b71-13c3d14667de)
+
 </p>
 <p>
-	Create a new session, root/Password1.
+	Create a new session, root/root
 </p>
 <p>
 	Connect to the session:
 </p>
 <p>
-	<img src="https://i.imgur.com/9t51ApR.png" height="75%" width="100%" "/>
 </p>
 <p>
 	Create a database called “osTicket”:
 </p>
 <p>
-	<img src="https://i.imgur.com/vXzmQqg.png" height="75%" width="100%" />
+	
+![setup mysql](https://github.com/user-attachments/assets/42b4a93e-a068-4540-9aa9-7e2c0362cb58)
+
 </p>
 <br />
 <br />
@@ -205,42 +204,23 @@ Now we need to install / Enable IIS in Windows. Go to your Search Bar > Type "Co
 <br />
 <p>MySQL Database: osTicket</p>
 <p>
-	MySQL Username: root
 </p>
 <p>
-	MySQL Password: Password1:
 </p>
 <p>
-	<img src="https://i.imgur.com/akDyber.png" height="75%" width="100%" />
+	
 </p>
 <p>Click “Install Now!”</p>
-<p>Congratulations, hopefully it is installed with no errors!</hp>
+<p>Congratulations, Hopefully Its Installed With No Errors
 <p>
-	<img src="https://i.imgur.com/J5omRoE.png" height="75%" width="100%" />
 </p>
-<br />
-<br />
-<h3 align="center">Clean up</h3>
+
+![done](https://github.com/user-attachments/assets/aab6b332-4ec7-4f32-b3a9-3c1deefe983d)
+
 <br />
 <p>
-	Delete: C:\inetpub\wwwroot\osTicket\setup:
-</p>
-<p>
-	<img src="https://i.imgur.com/eg0ZPG3.png" height="75%" width="100%" />
-</p>
-<p>
-	Set Permissions to “Read” only: C:\inetpub\wwwroot\osTicket\include\ost-config.php:
-</p>
-<p>
-	<img src="https://i.imgur.com/n6k46XL.png" height="75%" width="100%" />
-</p>
-<br />
-<br />
 <h3 align="center">Login to the osTicket Admin Panel (http://localhost/osTicket/scp/login.php)</h3>
 <br />
 <p>
-	<img src="https://i.imgur.com/8wvWH0H.jpg" height="75%" width="100%" />
 </p>
-<br />
-<br />
 <h3 align="center"> Congrats, You've Finished Installing osTicket.</h3>
