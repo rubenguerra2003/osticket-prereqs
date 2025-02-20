@@ -31,37 +31,216 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>Installation Steps</h2>
 
-<p>
-
-![osticketlab snip](https://github.com/user-attachments/assets/679bb26e-4ca2-4c63-8ba5-758eab051f72)
-
-
-</p>
-<p>
-Now we need to install / Enable IIS in Windows. Go to your Search Bar > Type "Control Panel" > Click "Programs" > "Turn Windows features on or off" > Scroll down to "Internet Information Services (IIS).
-
-</p>
+Now we need to install / Enable IIS in Windows. Go to your Search Bar > Type "Control Panel" > Click "Programs" > "Turn Windows features on or off" > Scroll down to "Internet Information Services (IIS).</h3>
 <br />
-
-<p>
-
-![image](https://github.com/user-attachments/assets/f7583ed1-0fbd-453a-934e-1e13503fa2bc)
-
-
-</p>
-<p>
-Once clicked, find the "Internet Information Services" expand it and then expand the "World Wide Web" tab. Afterward, expand the application Developer tab. Finally check the "CGI" button & press Ok. You will need CGI to download the PHP Manager. The PHP manager is a back-end web programming language that allows osTicket to run off a web browser.
-</p>
-<br />
-
-
-                                                      
 <p>
   
-![image](https://github.com/user-attachments/assets/ce233f31-e7c9-4aae-8646-c44d9f509476)
+![osticketlab snip](https://github.com/user-attachments/assets/595fbddc-ad2f-49bb-be7e-c1d23b0eab45)
+</p>
+<br />
+<br />
+<h3 align="center">Once clicked, find the "Internet Information Services" expand it and then expand the "World Wide Web" tab. Afterward, expand the application Developer tab. Finally check the "CGI" button & press Ok. You will need CGI to download the PHP Manager. The PHP manager is a back-end web programming language that allows osTicket to run off a web browser.</h3>
+<br />
+<p>
+  
+![turn cgi on](https://github.com/user-attachments/assets/848cc61c-1dfa-4267-a72e-6dd53a46b42d)
+
+</p>
+<br />
+<h3 align="center">Install PHP Manager</h3>
+<br />
+<p>
+<h3 align="center">Download the PHP manager file, and agree with all the terms. We've now downloaded the PHP manager into our operating system.</h3>
+<p>
+ 
+</p>
+<br/>
+<h3 align="center">Install Rewrite Module</h3>
+<br />
+<p>
+<h3 align="center">Download the Rewrite Module file, agree with all the terms and it should now be installed onto the Computer.</h3>
+<p>
+  <img src="https://github.com/Joeljjoseph1998/osticket-prereqs/assets/50834280/28cf2dd0-d39e-45f8-a01b-61aec6657228"height="75%" width="100%"/>
+</p>
+<br/>
+<h3 align="center">CREATE DIRECTORY C:\PHP</h3>
+<br />
+<p>
+<h3 align="center"> Open File Explorer, type, "C:\" in the search bar, Right-click and create a new folder called, "PHP". Download php-7.3.8-nts-Win32-VC15-x86.zip from<a href="https://drive.google.com/drive/u/2/folders/1APMfNyfNzcxZC6EzdaNfdZsUwxWYChf6"> Files You Need to Download</a>, Extract it by going to where you download the file, Right-click the PHP 7.3.8 file and press extract to the PHP Folder you just created.
+</h3>
+<p>
+  
+  ![osticketlab snip transfer extract to c php](https://github.com/user-attachments/assets/c464a1ba-7e18-4ba8-a20a-e007cd9e76ea)
+
+</p>
+<br/>
+<h3 align="center">VC_REDIST DOWNLOAD</h3>
+<br/>
+<h3 align="center"> Download and install VC_Redist, Agree with any terms and agreements and finish installing.
+</h3>
+<p>
+  
+ ![osticketlab install vcredist](https://github.com/user-attachments/assets/d2f73171-b1ac-4568-9d90-37059db283c8)
+
+
+</p>
+<br/>
+<h3 align="center">DOWNLOAD MySQL </h3>
+<h3 align="center"> Download and install MySQL, Agree with any terms and agreements up until you get to the password portion. Here you can create a username and password for the database that you'll be using to store the Ticket Information used in osTicket. 
+</h3>
+<p>
+  
+![osticketlab install mysql](https://github.com/user-attachments/assets/09f9fe97-0e72-4bd2-86c5-c98a5e3a2ce3)
+![osticketlab set sql password](https://github.com/user-attachments/assets/a2c0850a-da98-4856-9f4e-c4b225793116)
+
+<br/>
+</p>
+<br/>
+<h3 align="center">Install osTicket v1.15.8</h3>
+<br />
+<p>
+  Download osTicket (download from within lab files: link).
+</p>
+<p>
+	Extract and copy the “upload” folder INTO c:\inetpub\wwwroot:
+</p>
+
+![copy upload file to wwwroot](https://github.com/user-attachments/assets/839f50ed-1b31-4589-a8a5-d2de0dc51c20)
+
+<p>
+	Within c:\inetpub\wwwroot, Rename “upload” to “osTicket”:
+</p>
+<p>
+</p>
+<br />
+<br />
+
+	
+ Click “Enable or disable an extension” in IIS PHP Manager
+</p>
+<p>
+	Enable: php_imap.dll.
+</p>
+<p>
+	Enable: php_intl.dll.
+</p>
+<p>
+	Enable: php_opcache.dll:
+</p>
+<p>
+
+  ![enable extension](https://github.com/user-attachments/assets/68c8e865-321e-471e-9a74-7d51c62d1476)
+
+</p>
+<br />
+<br />
+<br />
+<p>
+</p>
+<br />
+<br />
+<h3 align="center">Rename</h3>
+<br />
+<p>
+	From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php.
+</p>
+<p>
+	To: C:\inetpub\wwwroot\osTicket\include\ost-config.php:
+</p>
+<p>
+  
+![rename to ostconfig](https://github.com/user-attachments/assets/8be21820-98d9-4986-b28a-96e1ce768002)
+
+</p>
+<br />
+<br />
+<h3 align="center">Assign Permissions: ost-config.php</h3>
+<br />
+<p>
+	Disable inheritance -> Remove All:
+
+  New Permissions -> Everyone -> All:
+</p>
+<p>
+	
+  ![assign permissons](https://github.com/user-attachments/assets/ddf566cd-dfa0-4214-ac66-3b6494b92e77)
 
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
 <br />
+<br />
+<br />
+<p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<br />
+<br />
+<h3 align="center">Download and Install HeidiSQL</h3>
+<br />
+<p>
+	<img src="https://i.imgur.com/AEg0b2P.png" height="75%" width="100%" />
+</p>
+<p>
+	Create a new session, root/Password1.
+</p>
+<p>
+	Connect to the session:
+</p>
+<p>
+	<img src="https://i.imgur.com/9t51ApR.png" height="75%" width="100%" "/>
+</p>
+<p>
+	Create a database called “osTicket”:
+</p>
+<p>
+	<img src="https://i.imgur.com/vXzmQqg.png" height="75%" width="100%" />
+</p>
+<br />
+<br />
+<h3 align="center">Continue Setting up osTicket in the browser</h3>
+<br />
+<p>MySQL Database: osTicket</p>
+<p>
+	MySQL Username: root
+</p>
+<p>
+	MySQL Password: Password1:
+</p>
+<p>
+	<img src="https://i.imgur.com/akDyber.png" height="75%" width="100%" />
+</p>
+<p>Click “Install Now!”</p>
+<p>Congratulations, hopefully it is installed with no errors!</hp>
+<p>
+	<img src="https://i.imgur.com/J5omRoE.png" height="75%" width="100%" />
+</p>
+<br />
+<br />
+<h3 align="center">Clean up</h3>
+<br />
+<p>
+	Delete: C:\inetpub\wwwroot\osTicket\setup:
+</p>
+<p>
+	<img src="https://i.imgur.com/eg0ZPG3.png" height="75%" width="100%" />
+</p>
+<p>
+	Set Permissions to “Read” only: C:\inetpub\wwwroot\osTicket\include\ost-config.php:
+</p>
+<p>
+	<img src="https://i.imgur.com/n6k46XL.png" height="75%" width="100%" />
+</p>
+<br />
+<br />
+<h3 align="center">Login to the osTicket Admin Panel (http://localhost/osTicket/scp/login.php)</h3>
+<br />
+<p>
+	<img src="https://i.imgur.com/8wvWH0H.jpg" height="75%" width="100%" />
+</p>
+<br />
+<br />
+<h3 align="center"> Congrats, You've Finished Installing osTicket.</h3>
